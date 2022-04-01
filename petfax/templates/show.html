@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section>
+        <h1>Welcome to PetFax</h1>
+        <h2>{{pet.pet_name}}</h2>
+        <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+    </section>
+</body>
+</html>
+{% endblock %}
