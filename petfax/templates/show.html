@@ -1,11 +1,16 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <section>
-        <h1>Welcome to PetFax</h1>
-        <h2>{{pet.pet_name}}</h2>
-        <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+    <section class="container">
+        <h1 class="title">{{pet.pet_name}}</h1>
+        <div class="callout">
+            <span style="font-weight: 800">Did you know?</span><br/>{{ pet.pet_fact }}
+        </div>
+        <div class="pets-container">
+            <div class="show-pet">
+                <img class="pet-image" src="{{pet.pet_photo}}" alt="Photo of pet" />
+            </div>
+        </div>
+        <a href="/pets">⟨　Go back</a>
     </section>
-</body>
-</html>
 {% endblock %}

@@ -1,13 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <section>
-        <h1>Welcome to PetFax</h1>
+    <h1>PetFax</h1>    
+    <section class="pets-container">
         {%for pet in pets%}
-            <a href="{{}}"><h2>{{pet.pet_name}}</h2></a>
-            <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+            <div class="pet">
+                <h2>{{pet.pet_name}}</h2>
+                <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+                <div class="card-body">
+                    <a href="/pets/{{pet.pet_id - 1}}">Learn More ></a>
+                </div>
+            </div>
         {%endfor%}
     </section>
-</body>
-</html>
+    <div class="callout">
+        We'd love to learn more fun facts! <a href="/facts/new">Submit some here.</a>
+    </div>
 {% endblock %}
