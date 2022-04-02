@@ -1,5 +1,9 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h1>UserFax</h1>    
+    <h1>UserFax</h1> 
+    {% for fact in facts %}
+        <h2>Submitted by {{fact.submitter}}</h2>
+        {{fact.fact}}
+    {% endfor %}
 {% endblock %}
